@@ -6,7 +6,7 @@ const app= express();
 app.use(express.json());
 
 
-mongoose.connect('mongodb+srv://adish:Oyebhai@104@cluster1.0b6kt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useNewUrlParser: true }, { useUnifiedTopology: true });
+mongoose.connect('Please enter your mongoDb URI', { useNewUrlParser: true }, { useUnifiedTopology: true });
 
 const makeSchema=mongoose.Schema({
 
@@ -54,7 +54,7 @@ app.post('/update/:id', async(req,res)=>{
 
 
 app.get('/', (req,res)=>{
-    res.send("chlra");
+    res.send("working");
 })
 
 app.listen(3001, console.log("server running"));
